@@ -1,0 +1,53 @@
+boolean[] num = new boolean[5];
+  	boolean[] coin = new boolean[5];
+		for(int i=0;i<4;i++){
+			num[i]=true;
+			coin[i] = true ;
+		}
+		int count = 0;
+		for(int i=0;i<100;i++){
+			if(i>3){
+				i=0;
+			}
+			for(int j=0;j<i;j++){
+					coin[]=!num[];
+					num[]=coin[];
+			}
+				if(i==0){
+				coin[0]=!num[0];
+				num[0]=coin[0];
+				}
+				else if(i==1){
+					coin[1] = !num[0];
+					coin[0] = !num[1];
+					num[1]=coin[1];
+					num[0]=coin[0];
+					
+				}
+				else if(i==2){
+					coin[2] = !num[0];
+					coin[1] = !num[1];
+					coin[0] = !num[2];
+					num[2]=coin[2];
+					num[1]=coin[1];
+					num[0]=coin[0];
+				}else if(i==3){
+					coin[3] = !num[0];
+					coin[2] = !num[1];
+					coin[1] = !num[2];
+					coin[0] = !num[3];
+					num[3]=coin[3];
+					num[2]=coin[2];
+					num[1]=coin[1];
+					num[0]=coin[0];
+				}
+			count++;
+			if(num[0]&&num[1]&&num[2]&&num[3]){
+				System.out.println("完成了"+count);
+				break;
+			}
+		}
+		for(int n=0;n<4;n++){
+			System.out.println(num[n]);
+		}
+		
